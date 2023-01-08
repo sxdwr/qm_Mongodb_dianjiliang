@@ -1,0 +1,15 @@
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:20 +0800] "GET / HTTP/1.1" 304 - http-bio-8080-exec-1 197
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:20 +0800] "GET /css/charge.css HTTP/1.1" 304 - http-bio-8080-exec-3 8
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:20 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-4 8
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:29 +0800] "GET /login.html HTTP/1.1" 304 - http-bio-8080-exec-6 4
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:29 +0800] "GET /css/base.css HTTP/1.1" 304 - http-bio-8080-exec-7 4
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:29 +0800] "GET /css/login.css HTTP/1.1" 304 - http-bio-8080-exec-8 5
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:29 +0800] "GET /images/taobao.png HTTP/1.1" 304 - http-bio-8080-exec-7 10
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:29 +0800] "GET /images/banner.jpg HTTP/1.1" 304 - http-bio-8080-exec-9 11
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:29 +0800] "GET /images/logo-4.png HTTP/1.1" 304 - http-bio-8080-exec-9 3
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:50 +0800] "GET /index.html HTTP/1.1" 304 - http-bio-8080-exec-5 2
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:50 +0800] "GET /css/index.css HTTP/1.1" 304 - http-bio-8080-exec-5 6
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:50 +0800] "GET /queryAllServlet HTTP/1.1" 200 2097 http-bio-8080-exec-5 575
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:55 +0800] "GET /brandDetail.html HTTP/1.1" 304 - http-bio-8080-exec-2 7
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:56 +0800] "POST /queryDetailServlet HTTP/1.1" 200 - http-bio-8080-exec-4 133
+0:0:0:0:0:0:0:1 - - [21/Dec/2022:22:05:56 +0800] "GET /queryAllServlet HTTP/1.1" 200 2097 http-bio-8080-exec-4 14

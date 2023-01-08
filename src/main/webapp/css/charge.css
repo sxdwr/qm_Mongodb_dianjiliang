@@ -1,0 +1,86 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.grouper {
+  position: absolute;
+  top: 125px;
+  right: 380px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.grouper span {
+  font-weight: 400;
+  font-style: italic;
+}
+table {
+  margin: 100px auto;
+  width: 800px;
+}
+table tr {
+  border-collapse: collapse;
+  border: 2px solid #cccccc;
+}
+table thead tr th {
+  text-align: center;
+  width: 800px;
+  font-size: 30px;
+  color: #e86161;
+  padding-bottom: 10px;
+}
+table tbody tr {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+table tbody tr th {
+  padding: 15px 10px;
+  width: 200px;
+  font-size: 20px;
+  margin-right: 100px;
+  font-weight: 500;
+  color: #cd7e7e;
+  border-right: 2px solid #cccccc;
+}
+table tbody tr td {
+  width: 150px;
+  text-align: center;
+  font-size: 20px;
+}
+p {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 30px;
+}
+p span {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  background-color: #000000;
+  color: red;
+}

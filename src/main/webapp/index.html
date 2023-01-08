@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阿里资产</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <!--    header-->
+    <div class="header ">
+        <div class="nav wrapper">
+            <div class="left">
+                <ul>
+                    <li><a href="#"><img src="images/index.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/top_2.png" alt="" ></a></li>
+                    <li><a href="#"><img src="images/top_5.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/top_4.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/top_1.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/top_help.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#"><img src="images/top_my.png" alt=""><span>我的</span></a></li>
+                    <li><a href="#">在线客服</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--header -->
+
+    <!-- logo -->
+    <div class="logo">
+        <div class="center">
+            <img src="./images/logo.png" alt="">
+        </div>
+        <div class="QRCode">
+            <p>下载阿里资产APP <br>
+                专业法拍服务 <br>
+                免费看样 <br>
+            </p>
+            <img src="./images/QRCode.png" alt="">
+
+        </div>
+    </div>
+    <!-- logo -->
+
+    <!--banner-->
+    <div class="banner">
+        <div class="wrapper">
+            <div class="left">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">法院</a></li>
+                    <li><a href="#">公告</a></li>
+                    <li><a href="#">预告</a></li>
+                    <li><a href="#">刑案</a></li>
+                    <li><a href="#">自行处置</a></li>
+                    <li><a href="#">破产</a></li>
+                    <li><a href="#">捡漏</a></li>
+                    <li><a href="#">精准获客</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <lable><input type="text" placeholder="标的物名称/地理位置/执行案号"></lable>
+                <button>搜索</button>
+            </div>
+        </div>
+    </div>
+    <!--banner-->
+
+    <!--    轮播图 -->
+    <div class="lbt wrapper">
+        <div class="left"></div>
+        <img src="./images/banner.png" alt="">
+        <div class="right"></div>
+    </div>
+    <!--    轮播图 -->
+
+    <div class="main wrapper" id="one">
+        <div class="top">
+            <h3>
+                <span>今日</span>拍卖
+            </h3>
+        </div>
+        <!--        机动车-->
+        <div class="content">
+            <div class="hd">
+                <h4>机动车</h4>
+                <a href="#">更多<span>900</span>件 ></a>
+            </div>
+            <div class="bd">
+                <ul class="cars">
+                    <li v-for="brand in brands">
+                        <a href="brandDetail.html" target="_blank" v-on:click="addRead(brand.brandID)" v-bind:id="brand.brandID" class="carid">
+                            <div class="pic">
+                                <img v-bind:src="brand.imageURL" alt="">
+                                <div class="title" style="color: #000;" v-model:brand.imageTitle>{{brand.imageTitle}}</div>
+                            </div>
+                            <div class="price">
+                                <p>当前价<span>¥ <i v-model:brand.priceNow>{{brand.priceNow}}万</i></span></p>
+                                <p>预估价 <i v-model:brand.forecast>¥{{brand.forecast}}万</i></p>
+                                <p>预计 <i v-model:brand.dateline>{{brand.dateline}}</i>结束</p>
+                            </div>
+                            <div class="view">
+                                <div><span v-model:brand.readNum>{{brand.readNum}} </span> 次围观</div>
+                                <div><span v-model:brand.participateNum>{{brand.participateNum}} </span> 人报名</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--  住宅-->
+        <div class="content">
+            <div class="hd">
+                <h4>住宅</h4>
+                <a href="#">更多<span>1045</span>件 ></a>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li>
+                        <div class="pic">
+                            <img src="./images/home1.jpg" alt="">
+                            <div class="title">福鼎市桐城玉兴路94号</div>
+                        </div>
+                        <div class="price">
+                            <p>当前价<span>¥ <i>388.68万</i></span></p>
+                            <p>预估价 <i>¥288.29万</i></p>
+                            <p>预计 <i>12 月 30 日 10:00 </i>结束</p>
+                        </div>
+                        <div class="view">
+                            <div><span>4665 </span> 次围观</div>
+                            <div><span>654 </span> 人报名</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <img src="./images/home2.jpg" alt="">
+                            <div class="title">苍南县灵溪镇横阳小区三期3幢108室不动产</div>
+                        </div>
+                        <div class="price">
+                            <p>当前价<span>¥ <i>27.68万</i></span></p>
+                            <p>预估价 <i>¥20.9万</i></p>
+                            <p>预计 <i>12 月 25 日 10:00 </i>结束</p>
+                        </div>
+                        <div class="view">
+                            <div><span>5645 </span> 次围观</div>
+                            <div><span>545 </span> 人报名</div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <img src="./images/home3.jpg" alt="">
+                            <div class="title">无锡市海悦花园52-3404室</div>
+                        </div>
+                        <div class="price">
+                            <p>当前价<span>¥ <i>278.68万</i></span></p>
+                            <p>预估价 <i>¥250.29万</i></p>
+                            <p>预计 <i>12 月 26 日 10:00 </i>结束</p>
+                        </div>
+                        <div class="view">
+                            <div><span>458 </span> 次围观</div>
+                            <div><span>550 </span> 人报名</div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <img src="./images/home4.jpg" alt="">
+                            <div class="title">四川省宜宾市珙县巡场镇河口村6幢3-1-1</div>
+                        </div>
+                        <div class="price">
+                            <p>当前价<span>¥ <i>13.68万</i></span></p>
+                            <p>预估价 <i>¥10.29万</i></p>
+                            <p>预计 <i>12 月 24 日 10:00 </i>结束</p>
+                        </div>
+                        <div class="view">
+                            <div><span>452 </span> 次围观</div>
+                            <div><span>40 </span> 人报名</div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <img src="./images/home5.jpg" alt="">
+                            <div class="title">杭州市上城区洑家新村7幢3单元202室房产</div>
+                        </div>
+                        <div class="price">
+                            <p>当前价<span>¥ <i>152.68万</i></span></p>
+                            <p>预估价 <i>¥125.29万</i></p>
+                            <p>预计 <i>12 月 25 日 10:00 </i>结束</p>
+                        </div>
+                        <div class="view">
+                            <div><span>4564 </span> 次围观</div>
+                            <div><span>545 </span> 人报名</div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <img src="./images/home6.jpg" alt="">
+                            <div class="title">（破）青州鸿源小区联排住宅5-1</div>
+                        </div>
+                        <div class="price">
+                            <p>当前价<span>¥ <i>235.68万</i></span></p>
+                            <p>预估价 <i>¥205.29万</i></p>
+                            <p>预计 <i>12 月 25 日 10:00 </i>结束</p>
+                        </div>
+                        <div class="view">
+                            <div><span>5454 </span> 次围观</div>
+                            <div><span>546 </span> 人报名</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <img src="./images/home7.jpg" alt="">
+                            <div class="title">重庆市南岸区海棠新街1号3栋9-8号住宅</div>
+                        </div>
+                        <div class="price">
+                            <p>当前价<span>¥ <i>154.9万</i></span></p>
+                            <p>预估价 <i>¥128.88万</i></p>
+                            <p>预计 <i>12 月 26 日 10:00 </i>结束</p>
+                        </div>
+                        <div class="view">
+                            <div><span>4556 </span> 次围观</div>
+                            <div><span>454 </span> 人报名</div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <img src="./images/home8.jpg" alt="">
+                            <div class="title">南京市秦淮区金陵闸33号101室不动产</div>
+                        </div>
+                        <div class="price">
+                            <p>当前价<span>¥ <i>269.99万</i></span></p>
+                            <p>预估价 <i>¥250.99万</i></p>
+                            <p>预计 <i>12 月 24 日 10:00 </i>结束</p>
+                        </div>
+                        <div class="view">
+                            <div><span>4675 </span> 次围观</div>
+                            <div><span>56454 </span> 人报名</div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/axios-0.18.0.js"></script>
+    <script>
+        new Vue({
+            el:"#one",
+            mounted(){
+                let _this = this;
+                //console.log(this.id)
+                axios({
+                    method:"get",
+                    url:"http://localhost:8080/queryAllServlet"
+                }).then(function (resp){
+                    _this.brands = resp.data;
+                })
+            },
+            data(){
+                return {
+                    id:"",
+                    brand:{
+                        brandID:"",
+                        readNum:"",
+                        participateNum:""
+                    },
+                //    全部商品数据
+                    brands:[{
+                        brandID:"",
+                        imageURL:"",
+                        imageTitle:"",
+                        priceNow:"",
+                        forecast:"",
+                        dateline:"",
+                        readNum:"",
+                        participateNum:""
+                    }]
+                }
+            },
+            methods:{
+                addRead(){
+                    let _this = this;
+                    // _this.id = document.querySelector('.carid').id;
+                    _this.id = arguments[0];
+                    axios({
+                        method: "post",
+                        url:"http://localhost:8080/queryDetailServlet",
+                        data:_this.id
+                    }).then(function (resp){
+                        // console.log("success");
+                        window.location.href = 'index.html';
+                    })
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

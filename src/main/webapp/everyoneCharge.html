@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>负责内容</title>
+        <link rel="stylesheet" href="./css/charge.css">
+    </head>
+    <body>
+        <div class="grouper">组长 : <span>李健</span></div>
+        <table>
+                <thead>
+                <tr>
+                    <th>负责部分</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>前端静态页面</th>
+                    <td>李青原</td>
+                    <td>李杰林</td>
+                </tr>
+                <tr>
+                    <th>前后端交互</th>
+                    <td>郭建君</td>
+                </tr>
+                <tr>
+                    <th>后端编写</th>
+                    <td>李健</td>
+                    <td>秦绘</td>
+                </tr>
+                <tr>
+                    <th>登录界面</th>
+                    <td>马赦瑜</td>
+                    <td>胡超</td>
+                </tr>
+                <tr>
+                    <th>责任页面</th>
+                    <td>罗宇涵</td>
+                </tr>
+                </tbody>
+        </table>
+
+        <p>即将 <span class="res_time">10</span> 后进入登录界面</p>
+        <script>
+
+            let res = document.querySelector('.res_time');
+            let time = res.innerText;
+            // alert(time);
+            //计时器
+            let timer = setInterval(function () {
+                time --;
+                if (time == 1){
+                    location.href = 'login.html';
+                    clearInterval(timer);
+                }
+                res.innerText = time + '';
+            },1000);
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝-登录</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/login.css">
+
+</head>
+
+<body>
+    <!-- 左边图片 -->
+    <div class="left">
+        <img src="./images/banner.jpg" alt="">
+    </div>
+    <!-- 导航 -->
+    <div class="nav">
+        <div class="left">
+            <img src="./images/taobao.png" alt="">
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="#">用户协议</a></li>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li>|</li>
+                <li>
+                    <select name="" id="" size="1">
+                        <option value="1">中文(简体)</option>
+                        <option value="2">中文(繁體)</option>
+                        <option value="3">English</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 登录界面 -->
+    <div class="main">
+        <div class="login">
+            <h3>登录</h3>
+            <div class="user">
+                <input type="text" placeholder="账号/手机号码" class="user_ipt">
+                <p class="user_msg">
+                    <img src="./images/right.png" alt="">
+                    <span>账号正确</span>
+                </p>
+            </div>
+            <div class="psd">
+                <input type="password" placeholder="密码" class="pwd">
+                <a class="psd_query"><img src="./images/close.png" alt=""></a>
+            </div>
+            <div class="check">
+                <input type="checkbox" class="check_ipt">
+                <span> 已阅读并同意 <a href="#">用户协议</a> 和 <a href="#">隐私政策</a></span>
+            </div>
+            <div class="log">
+                <input type="submit" value="登录" class="user_submit">
+            </div>
+            <div class="box1 clearfix">
+                <a href="#" class="left">忘记密码？</a>
+                <a href="#" class="right">手机号登录</a>
+            </div>
+            <div class="other">
+                <h4>其他方式登录</h4>
+                <div class="logos">
+                    <a href="#"><span></span></a>
+                    <a href="#"><span></span></a>
+                    <a href="#"><span></span></a>
+                    <a href="#"><span></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="footer">
+        <p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+    </div>
+
+
+    <script>
+
+        // 账号验证 （全为数字即为正确且长度不能超过11位）
+
+        let u_ipt = document.querySelector('.user_ipt');
+
+        let u_msg = document.querySelector('.user_msg');
+
+        u_ipt.addEventListener('blur',checkUser);
+
+        //密码查看按钮
+        let psdQuery = document.querySelector('.psd_query');
+        psdQuery.onclick = function () {
+            let pwd = document.querySelector('.pwd');
+            let img = psdQuery.children[0];
+            if (pwd.type === 'text'){
+                img.src = './images/close.png';
+                pwd.type = 'password';
+            }else{
+                img.src = './images/open.png';
+                pwd.type = 'text';
+            }
+        }
+
+
+        let user_submit = document.querySelector('.user_submit');
+        user_submit.addEventListener('click',function () {
+            let check_ipt = document.querySelector('.check_ipt');
+            if (checkUser()){
+                if (check_ipt.checked){
+                    location.href = 'index.html';
+                }else{
+                    alert('请同意用户协议');
+                }
+            }else{
+                alert('账号错误');
+            }
+        });
+
+        //验证账号
+        function checkUser() {
+            let txt = u_ipt.value;
+            let flag = true;
+
+            if (txt.length > 11 || txt === '') flag = false;
+            else{
+                for (let i = 0; i < txt.length; i++) {
+                    if (txt[i] < '0' || txt[i] > '9'){
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            let img;
+            let msg;
+
+            if (flag){
+                img = './images/right.png';
+                msg = '账号格式正确';
+            }
+            else{
+                img = './images/wrong.png';
+                msg = '账号格式错误';
+            }
+            u_msg.children[0].src = img;
+            u_msg.children[1].innerHTML = msg;
+            // u_msg.children[1].innerText = msg;
+
+            u_msg.style.display = 'block';
+
+            return flag;
+        }
+    </script>
+</body>
+
+</html>

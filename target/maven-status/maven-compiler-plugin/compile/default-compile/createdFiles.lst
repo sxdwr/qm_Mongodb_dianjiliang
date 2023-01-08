@@ -1,0 +1,3 @@
+com\cdutetc\web\QueryAllServlet.class
+com\cdutetc\web\QueryByIDServlet.class
+com\cdutetc\web\QueryDetailServlet.class
